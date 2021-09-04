@@ -10,5 +10,16 @@ test('Changes button background colour and text on click', () => {
 
   expect(button).toHaveStyle('background-color: blue');
   expect(button.textContent).toBe('Change to red');
+});
+
+test('Initial conditions', () => {
+  render(<App />);
+  // button is enabled by default
+  const button = screen.getByRole('button', { name: 'Change to blue' });
+  expect(button).toBeEnabled();
+  // checkbox is not checked by default
+  const checkbox = screen.getByRole('checkbox');
+  expect(checkbox).not.toBeChecked();
+
 
 });
