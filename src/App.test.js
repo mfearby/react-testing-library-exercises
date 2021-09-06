@@ -9,7 +9,7 @@ test('Changes button background colour and text on click', () => {
   fireEvent.click(button);
 
   expect(button).toHaveStyle('background-color: MidnightBlue');
-  expect(button.textContent).toBe('Change to MediumVioletRed');
+  expect(button).toHaveTextContent('Change to MediumVioletRed');
 });
 
 test('Initial conditions', () => {
